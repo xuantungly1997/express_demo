@@ -13,6 +13,12 @@ router.get('/create', (req, res) => {
 
 router.post('/create', controller.create)
 
-router.get('/:id', controller.viewDetail)
+router.get('/detail/:id', controller.viewDetail)
+
+router.get('/delete/:id', controller.delete)
+
+router.get('/edit/:id', controller.getEdit)
+
+router.post('/update', controller.updateUser)
 
 module.exports = router;

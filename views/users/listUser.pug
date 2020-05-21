@@ -1,10 +1,29 @@
-h1 LIST USERS
-a(href="user/create") create
-form(action="/user/search", method = "get")
-    input(type="text", name="q")
-    button search
-ul 
-    each user in users
-        li 
-            span= user.name 
-            a(href="/user/" + user.id) &nbsp view
+extends ../demoPug.pug
+
+block content
+    h1.text-center LIST USERS
+    .action.mt-2
+        a.btn.btn-outline-success(href="user/create") create
+        form(action="/user/search", method = "get", class="form-search")
+            input(type="text", name="q", value=value)
+            button search
+    table.table.table-striped.mt-3
+        thead
+            tr
+                th(scope='col') id
+                th(scope='col') Name
+                th(scope='col') Age
+                th(scope='col') Action
+        tbody
+            each user in users
+                tr
+                    td 
+                        span= user.id 
+                    td 
+                        span= user.name 
+                    td 
+                        span= user.age
+                    td 
+                        a(href="/user/detail/" + user.id) &nbsp view
+                        a(href="/user/delete/" + user.id) &nbsp delete
+                        a(href="/user/edit/" + user.id) &nbsp edit

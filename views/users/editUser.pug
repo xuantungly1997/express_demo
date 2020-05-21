@@ -1,0 +1,14 @@
+extends ../demoPug.pug
+
+block content
+
+    h1.text-center edit user
+    form.form-create(action="/user/update", method= "POST")
+        input(type="text", name="id", value=dataup.id, style="display:none")
+        .form-group
+            label(for='formGroupExampleInput') name
+            input#formGroupExampleInput.form-control(type="text" name="name", value=dataup.name)
+        .form-group
+            label(for='formGroupExampleInput2') age
+            input#formGroupExampleInput2.form-control(type="text" name="age" value=dataup.age)
+        button.btn.btn-primary(type='submit') Submit

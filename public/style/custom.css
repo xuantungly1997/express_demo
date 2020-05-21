@@ -1,0 +1,21 @@
+.action{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.form-search{
+    margin: 0;
+}
+
+.form-create{
+    margin: 0 auto;
+    width: 400px;
+}
+
+.table{
+    width: 650px;
+    margin: auto;
+}

@@ -1,32 +1,14 @@
 {
   "users": [
     {
-      "name": "ádsad",
-      "id": "rDnGEKhnz"
+      "id": "Ic7YvAJvL",
+      "name": "Tung",
+      "age": "55"
     },
     {
-      "name": "sadaf",
-      "id": "xj27DDPne"
-    },
-    {
-      "name": "xuan tung",
-      "id": "tTsTV6ZSU"
-    },
-    {
-      "name": "aaaaaaaa",
-      "id": "fnFg9Ns9l"
-    },
-    {
-      "name": "bbbbbbb",
-      "id": "vzue5ZyK7"
-    },
-    {
-      "name": "sfsdf",
-      "id": "b02opLs-_"
-    },
-    {
-      "name": "yen bai",
-      "id": "G7vh-TvbQ"
+      "id": "Hsl4MFdB4",
+      "name": "Xuan",
+      "age": "33"
     }
   ]
 }

@@ -1,5 +1,12 @@
-h1 create user
-form(action="/user/create", method= "POST")
-    label name
-    input(type="text" name="name")
-    button create
+extends ../demoPug.pug
+
+block content
+    h1.text-center create user
+    form.form-create(action="/user/create", method= "POST")
+        .form-group
+            label(for='formGroupExampleInput') name
+            input#formGroupExampleInput.form-control(type="text" name="name")
+        .form-group
+            label(for='formGroupExampleInput2') age
+            input#formGroupExampleInput2.form-control(type="text" name="age")
+        button.btn.btn-primary(type='submit') Submit
