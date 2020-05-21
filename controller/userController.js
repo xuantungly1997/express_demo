@@ -1,3 +1,4 @@
+const md5 = require('md5');
 const db = require('../db');
 const shortid = require('shortid');
 
@@ -20,7 +21,9 @@ module.exports.create = (req, res, next) => {
     const formValue = {
         id : shortid.generate(),
         name: req.body.name,
-        age: req.body.age
+        age: req.body.age,
+        email: req.body.email,
+        password: md5(req.body.password)
     }
     console.log(formValue);
     db.get('users').push(formValue).write();

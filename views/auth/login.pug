@@ -1,21 +1,20 @@
 extends ../demoPug.pug
 
 block content
-    h1.text-center create user
+    h1.text-center login
     if errors
         each error in errors
             .alert.alert-warning.alert-dismissible.fade.show(role='alert')
                 strong= error
                 button.close(type='button', data-dismiss='alert', aria-label='Close')
                     span(aria-hidden='true') &times;
+    if errorLogin
+        .alert.alert-warning.alert-dismissible.fade.show(role='alert')
+            strong= errorLogin
+            button.close(type='button', data-dismiss='alert', aria-label='Close')
+                span(aria-hidden='true') &times;
 
-    form.form-create(action="/user/create", method= "POST")
-        .form-group
-            label(for='formGroupExampleInput') name
-            input#formGroupExampleInput.form-control(type="text",name="name", value=value ? value.name : "")
-        .form-group
-            label(for='formGroupExampleInput2') age
-            input#formGroupExampleInput2.form-control(type="text", name="age", value=value ? value.age : "")
+    form.form-create(action="/auth/login", method= "POST")
         .form-group
             label(for='formGroupExampleInput') email
             input#formGroupExampleInput.form-control(type="text",name="email", value=value ? value.email : "")
