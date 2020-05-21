@@ -3,7 +3,7 @@ extends ../demoPug.pug
 block content
     h1.text-center LIST USERS
     .action.mt-2
-        a.btn.btn-outline-success(href="user/create") create
+        a.btn.btn-outline-success(href="/user/create") create
         form(action="/user/search", method = "get", class="form-search")
             input(type="text", name="q", value=value)
             button search

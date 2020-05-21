@@ -2,11 +2,18 @@ extends ../demoPug.pug
 
 block content
     h1.text-center create user
+    if errors
+        each error in errors
+            .alert.alert-warning.alert-dismissible.fade.show(role='alert')
+                strong= error
+                button.close(type='button', data-dismiss='alert', aria-label='Close')
+                    span(aria-hidden='true') &times;
+
     form.form-create(action="/user/create", method= "POST")
         .form-group
             label(for='formGroupExampleInput') name
-            input#formGroupExampleInput.form-control(type="text" name="name")
+            input#formGroupExampleInput.form-control(type="text",name="name", value=value ? value.name : "")
         .form-group
             label(for='formGroupExampleInput2') age
-            input#formGroupExampleInput2.form-control(type="text" name="age")
+            input#formGroupExampleInput2.form-control(type="text", name="age", value=value ? value.age : "")
         button.btn.btn-primary(type='submit') Submit
